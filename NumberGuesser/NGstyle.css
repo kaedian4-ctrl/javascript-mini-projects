@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 90vh;
+    gap: 10px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.enterGuess {
+    background-color: darkgray;
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+
+    text-align: center;
+    color: white;
+    font-size: small;
+
+}
+
+.submitGuess {
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+.enterGuess::placeholder {
+    color: white;
+    text-align: center;
+}
+
+
+
+#restart {
+    padding: 12px 24px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#restart:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+#restart:active {
+    transform: translateY(0);
+}
+
+#restart:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+.error {
+    display: block;
+    margin-top: 12px;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 18px;
+}
+
+.attempts {
+    display: block;
+    margin-top: 8px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+
