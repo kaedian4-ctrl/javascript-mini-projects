@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="PSscript.js" defer></script>
+    <link rel="stylesheet" href="PSstyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="layout">
+        <main>
+            <form id="passwordForm">
+                <label for="password" class="labelPassword">Type a Password</label>
+                <div class="passwordField">
+                    <input id="password" type="password" class="password">
+                    <button type="button" class="togglePassword" id="togglePassword">Show</button>
+                </div>
+            </form>
+
+            <div class="strengthContainer">
+                <div>
+                    <span id="weak" class="strength"></span>
+                    <small>Weak</small>
+                </div>
+
+                <div>
+                    <span id="medium" class="strength"></span>
+                    <small>Medium</small>
+                </div>
+
+                <div>
+                    <span id="strong" class="strength"></span>
+                    <small>Strong</small>
+                </div>
+            </div>
+            <button type="button" form="passwordForm" class="clearPassword" id="clearPassword">Clear</button>
+        </main>
+
+        <section class="informationBox">
+            <div><span>Upper Case</span><span class="ruleStatus" id="upperCaseCheck">❌</span></div>
+            <div><span>Lower Case</span><span class="ruleStatus" id="lowerCaseCheck">❌</span></div>
+            <div><span>Number</span><span class="ruleStatus" id="numberCheck">❌</span></div>
+            <div><span>Symbol</span><span class="ruleStatus" id="symbolCheck">❌</span></div>
+            <div><span>Length</span><span class="ruleStatus" id="lengthCheck">❌</span></div>
+        </section>
+    </div>
+</body>
+</html>
