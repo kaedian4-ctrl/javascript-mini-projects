@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="TDLscript.js" defer></script>
+    <link rel="stylesheet" href="TDLstyle.css">
+    <title>To-Do-List</title>
+</head>
+<body>
+    <form>
+        <div class="addField">
+            <input id="taskInput"class="taskInput"type="text"placeholder="Add new task">
+            <button id="taskAdd" class="taskAdd" type="submit">+</button>
+        </div>
+    </form>
+
+    <main>
+        <div class="filters">
+            <button type="button" id="all">All</button>
+            <button type="button" id="active">Active</button>
+            <button type="button" id="completed">Completed</button>
+            <p id="taskCounter">0 tasks remaining</p>
+        </div>
+
+        <div id="taskList" class="taskList">
+        </div>
+    </main>
+</body>
+</html>
