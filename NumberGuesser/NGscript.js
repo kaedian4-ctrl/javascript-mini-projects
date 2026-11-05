@@ -16,8 +16,6 @@ function generateNumber() {
 function randomNumber (event) {
     event.preventDefault();
 
-
-    
     if (gameOver) {
         return;
     }
@@ -25,39 +23,38 @@ function randomNumber (event) {
     if (!gameStarted) {
         numberGenerated = generateNumber();
         gameStarted = true;
-    } 
+    }
 
-    let guessEntered = Number(enterGuess.value)
+    let guessEntered = Number(enterGuess.value);
 
     if (enterGuess.value === "") {
-        error.textContent = "Invalid"
-        return
+        error.textContent = "Invalid";
+        return;
     }
 
     if (!Number.isInteger(guessEntered)) {
         error.textContent = "Not integer";
-        return
+        return;
     } else if (guessEntered < 1 || guessEntered > 50) {
         error.textContent = "Enter a whole number from 1 to 50.";
-        return
+        return;
     } else {
-        userProcess(numberGenerated, guessEntered)
+        userProcess(numberGenerated, guessEntered);
         enterGuess.value = "";
     }
-
 }
 
 function userProcess (numberGenerated, guessEntered) {
     count++;
-    
+
     if (count >= 7) {
-        gameOver = true
+        gameOver = true;
     }
 
     if (numberGenerated === guessEntered) {
         error.textContent = "Correct!";
         attempts.textContent = `Attempts : ${count}/7`;
-        gameOver = true
+        gameOver = true;
     } else if (numberGenerated > guessEntered) {
         error.textContent = "Too low! Try again.";
         attempts.textContent = `Attempts : ${count}/7`;
@@ -65,17 +62,20 @@ function userProcess (numberGenerated, guessEntered) {
         error.textContent = "Too high! Try again.";
         attempts.textContent = `Attempts : ${count}/7`;
     }
+
+    if (gameOver && numberGenerated !== guessEntered) {
+        error.textContent = `Game over! The number was ${numberGenerated}.`;
+    }
 }
 
 function restartGame () {
     count = 0;
     gameOver = false;
     gameStarted = false;
-    enterGuess.value = ""
-    error.textContent = ""
-    attempts.textContent = ""
+    enterGuess.value = "";
+    error.textContent = "";
+    attempts.textContent = "";
 }
 
-
-form.addEventListener("submit", randomNumber)
-restart.addEventListener("click", restartGame)
+form.addEventListener("submit", randomNumber);
+restart.addEventListener("click", restartGame);
