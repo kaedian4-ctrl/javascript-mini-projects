@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to bottom right, #172554, #312e81);
+    color: #f1f5f9;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.picker {
+    width: min(100%, 480px);
+    padding: 32px;
+    border-radius: 18px;
+    background-color: #1e293b;
+    box-shadow: 0 12px 32px rgba(2, 6, 23, 0.38);
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+}
+
+.intro {
+    margin-bottom: 24px;
+    color: #a5b4c7;
+    text-align: center;
+}
+
+.pickSection {
+    display: grid;
+    gap: 16px;
+    justify-items: center;
+    padding: 22px;
+    border-radius: 14px;
+    background-color: #263449;
+}
+
+.activityResult {
+    min-height: 1.5em;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+button {
+    border: 0;
+    border-radius: 9px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #22d3ee;
+    outline-offset: 3px;
+}
+
+.primaryButton {
+    padding: 11px 20px;
+    background-color: #0e7490;
+    color: #ecfeff;
+}
+
+.primaryButton:hover {
+    background-color: #0891b2;
+}
+
+.addForm {
+    display: grid;
+    gap: 9px;
+    margin-top: 24px;
+}
+
+.addForm label {
+    font-weight: 600;
+}
+
+.inputRow {
+    display: flex;
+    gap: 8px;
+}
+
+.inputRow input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font: inherit;
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+.secondaryButton {
+    padding: 10px 16px;
+    background-color: #7c3aed;
+    color: #f5f3ff;
+}
+
+.secondaryButton:hover {
+    background-color: #8b5cf6;
+}
+
+.activitySection {
+    margin-top: 24px;
+}
+
+.listHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.listHeading h2 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.listHeading p {
+    margin: 0;
+    color: #a5b4c7;
+    font-size: 0.9rem;
+}
+
+.activityList {
+    display: grid;
+    gap: 8px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.activityList li {
+    padding: 10px 12px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background-color: #263449;
+}
+
+@media (max-width: 420px) {
+    .picker {
+        padding: 24px 18px;
+    }
+}
