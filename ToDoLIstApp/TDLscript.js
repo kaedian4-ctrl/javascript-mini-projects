@@ -20,6 +20,21 @@ function taskCreator (event) {
     }
 
     displayTask(userInput)
+    updateTaskCounter()
+}
+
+function updateTaskCounter () {
+    let remainingTasks = 0;
+    let tasks = taskList.querySelectorAll(".task");
+
+    tasks.forEach(function(task) {
+        let checkbox = task.querySelector("input");
+        if (!checkbox.checked) {
+            remainingTasks++;
+        }
+    });
+
+    taskCounter.textContent = remainingTasks;
 }
 
 function displayTask(userInput) {
@@ -37,6 +52,7 @@ function displayTask(userInput) {
 
     deleteButton.addEventListener("click", function() {
         taskContainer.remove();
+        updateTaskCounter();
     });
 
 
@@ -53,6 +69,7 @@ function displayTask(userInput) {
             taskText.classList.remove("completed");
             filterTasks(currentFilter);
         }
+        updateTaskCounter();
     });
 }
 
@@ -103,3 +120,4 @@ completed.addEventListener("click", function() {
 
 form.addEventListener("submit", taskCreator);
 
+updateTaskCounter();
