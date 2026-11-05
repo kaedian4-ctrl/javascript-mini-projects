@@ -10,10 +10,9 @@ let numberCheck = document.getElementById("numberCheck");
 let symbolCheck = document.getElementById("symbolCheck");
 let lengthCheck = document.getElementById("lengthCheck");
 
-
 function passwordValidation () {
     let score = 0;
-    userPassword = password.value;
+    let userPassword = password.value;
 
     upperCaseCheck.textContent = "❌";
     lowerCaseCheck.textContent = "❌";
@@ -25,37 +24,34 @@ function passwordValidation () {
     let lowerCase = /[a-z]/.test(userPassword);
     let number = /[0-9]/.test(userPassword);
     let symbol = /[^A-Za-z0-9]/.test(userPassword);
-    let length = userPassword.length >= 8
+    let length = userPassword.length >= 8;
 
     if (upperCase) {
-        upperCaseCheck.textContent = "✅"
-        score++
+        upperCaseCheck.textContent = "✅";
+        score++;
     }
 
     if (lowerCase) {
-        lowerCaseCheck.textContent = "✅"
-        score++
+        lowerCaseCheck.textContent = "✅";
+        score++;
     }
 
     if (number) {
-        numberCheck.textContent = "✅"
-        score++
+        numberCheck.textContent = "✅";
+        score++;
     }
 
     if (symbol) {
-        symbolCheck.textContent = "✅"
-        score++
+        symbolCheck.textContent = "✅";
+        score++;
     }
 
     if (length) {
-        lengthCheck.textContent = "✅"
-        score++
+        lengthCheck.textContent = "✅";
+        score++;
     }
 
-    strengthChecker(score)
-
-    console.log(userPassword);
-    console.log(score);
+    strengthChecker(score);
 }
 
 function strengthChecker (score) {
@@ -64,30 +60,29 @@ function strengthChecker (score) {
     strong.classList.remove("strong");
 
     if (score === 0) {
-        return
+        return;
     }
 
     if (score === 5) {
-        strong.classList.add("strong")
-        medium.classList.add("medium")
-        weak.classList.add("weak")
+        strong.classList.add("strong");
+        medium.classList.add("medium");
+        weak.classList.add("weak");
     } else if (score >= 3) {
-        medium.classList.add("medium")
-        weak.classList.add("weak")
+        medium.classList.add("medium");
+        weak.classList.add("weak");
     } else {
-        weak.classList.add("weak")
+        weak.classList.add("weak");
     }
 }
 
-password.addEventListener("input", passwordValidation)
+password.addEventListener("input", passwordValidation);
 togglePassword.addEventListener("click", function() {
     password.type = password.type === "password" ? "text" : "password";
     togglePassword.textContent = password.type === "password" ? "Show" : "Hide";
 });
 
 clearPassword.addEventListener("click", function() {
-    score = 0
-    password.value = ""
+    password.value = "";
     password.type = "password";
     togglePassword.textContent = "Show";
     weak.classList.remove("weak");
