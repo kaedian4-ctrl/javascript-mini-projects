@@ -1,0 +1,180 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #fdd835, #f9a825);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    gap: 24px;
+}
+
+.gameContainer {
+    position: relative;
+    width: min(500px, calc(100vw - 40px));
+    min-height: 300px;
+    box-sizing: border-box;
+    padding: 35px 24px 105px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.sameResult {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    width: calc(100% - 48px);
+    min-height: 1.5em;
+    margin: 0;
+    color: #1e3a5f;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.gameContainer button {
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #1e3a5f;
+    color: #fdd835;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(30, 58, 95, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gameContainer button svg {
+    width: 48px;
+    height: 48px;
+    fill: none;
+    stroke: #1e3a5f;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.rockShape {
+    fill: #f2c94c;
+}
+
+.rockCrack {
+    stroke: #a97812;
+    stroke-width: 1.8;
+}
+
+.paperSheet {
+    fill: #fff8dc;
+}
+
+.paperFold {
+    fill: #f9a825;
+}
+
+.paperLines {
+    stroke: #d99b00;
+    stroke-width: 1.8;
+}
+
+.scissorHandle {
+    fill: #fff8dc;
+    stroke-width: 2.5;
+}
+
+.scissorBlade {
+    fill: #f2c94c;
+}
+
+.scissorJoint {
+    fill: #f9a825;
+    stroke: #1e3a5f;
+}
+
+.gameContainer button:hover {
+    transform: translateY(-4px);
+    background-color: #294f7d;
+    box-shadow: 0 9px 16px rgba(30, 58, 95, 0.3);
+}
+
+.gameContainer button:focus-visible {
+    outline: 3px solid #1e3a5f;
+    outline-offset: 4px;
+}
+
+.choiceDisplay {
+    position: absolute;
+    left: 50%;
+    bottom: 62px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: calc(100% - 40px);
+    color: #1e3a5f;
+    font-size: 0.9rem;
+    transform: translateX(-50%);
+}
+
+.choiceDisplay p {
+    margin: 0;
+}
+
+.choiceDisplay span {
+    font-weight: 600;
+}
+
+.scoreTracker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    width: max-content;
+    max-width: calc(100% - 36px);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #1e3a5f;
+    font-size: 0.9rem;
+    transform: translateX(-50%);
+}
+
+.scoreTracker p {
+    margin: 0;
+}
+
+.resetButton {
+    padding: 10px 24px;
+    border: 2px solid #1e3a5f;
+    border-radius: 8px;
+    background-color: #1e3a5f;
+    color: #fff8dc;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.resetButton:hover {
+    background-color: #294f7d;
+    transform: translateY(-2px);
+}
+
+.resetButton:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}

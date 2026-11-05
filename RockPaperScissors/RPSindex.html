@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="RPSscript.js" defer></script>
+    <link rel="stylesheet" href="RPSstyle.css">
+    <title>RockPaperScissors</title>
+</head>
+<body>
+
+    <div class="gameContainer">
+        <p id="sameResult" class="sameResult"></p>
+        <button type="button" id="rock" class="rock" aria-label="Rock">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path class="rockShape" d="m7 31 5-13 9-8 13 2 8 10-3 13-12 5-15-3z"></path>
+                <path class="rockCrack" d="m12 18 10 6 12-12M22 24l-8 13m8-13 17-2m-17 2 5 15"></path>
+            </svg>
+        </button>
+        <button type="button" id="paper" class="paper" aria-label="Paper">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path class="paperSheet" d="M12 5h16l9 9v29H12z"></path>
+                <path class="paperFold" d="M28 5v10h9"></path>
+                <path class="paperLines" d="M18 23h13M18 29h13M18 35h9"></path>
+            </svg>
+        </button>
+        <button type="button" id="scissors" class="scissors" aria-label="Scissors">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="scissorHandle" cx="12" cy="14" r="6"></circle>
+                <circle class="scissorHandle" cx="12" cy="34" r="6"></circle>
+                <path class="scissorBlade" d="m17 17 24 21-3 3-22-20m1-2 22-20 3 3-24 21"></path>
+                <circle class="scissorJoint" cx="21" cy="24" r="2.5"></circle>
+            </svg>
+        </button>
+
+        <div class="choiceDisplay">
+            <p>You chose: <span id="playerChoice">—</span></p>
+            <p>Computer chose: <span id="computerChoice">—</span></p>
+        </div>
+
+        <div class="scoreTracker">
+            <p id="computerOutput">Computer: </p>
+            <p id="playerOutput">You: </p>
+        </div>
+    </div>
+    <button type="button" id="resetButton" class="resetButton">Reset</button>
+</body>
+</html>
