@@ -7,7 +7,6 @@ A collection of small, browser-based projects built with HTML, CSS, and vanilla 
 - **Number Guesser** — Guess a randomly generated number from 1 to 50, with up to seven attempts.
 - **Password Strength Checker** — Check a password against uppercase, lowercase, number, symbol, and length requirements.
 - **Rock Paper Scissors** — Play rock, paper, scissors against the computer and keep score.
-- **To-Do List App** — Add tasks, mark them complete, delete them, and filter by status.
 
 ## Run a project
 
@@ -18,4 +17,3 @@ Open the project's HTML file in a web browser:
 | Number Guesser | `NumberGuesser/NGindex.html` |
 | Password Strength Checker | `PasswordStrengthChecker/PSindex.html` |
 | Rock Paper Scissors | `RockPaperScissors/RPSindex.html` |
-| To-Do List App | `ToDoLIstApp/TDLindex.html` |
